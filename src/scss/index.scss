@@ -1,0 +1,47 @@
+#video-grid {
+    display: grid;
+    grid: { 
+        template-columns: repeat(auto-fill, 300px);
+        auto-rows: 300px;
+    }
+}
+
+body{
+    display: flex;
+    height: 95vh;
+    width: 99.39vw;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+video {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    transform: rotateY(180deg);
+    border-radius: 100%;
+    padding: 30px;
+    justify-self: center;
+    align-self: center;
+}
+
+.toggle {
+    $square_dimensions:60px;
+    justify-self: center;
+    // margin: 5px;
+    align-self: center;
+    width: $square_dimensions;
+    height: $square_dimensions;
+    background: none;
+    border: 0px;
+}
+
+#button{
+    $width:10vh;
+    display: grid;
+    background-color: aqua;
+    width: 100%;
+    height: $width;
+    grid: $width / auto auto auto;
+    justify-self: bottom;
+}
